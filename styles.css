@@ -4,6 +4,7 @@
   --muted: #57534e;
   --line: #e7e5e4;
   --accent: #0a6fa8;
+  --accent-soft: #e6f3fa;
   --radius: 8px;
 }
 
@@ -54,6 +55,19 @@ h2 { font-size: 1.25rem; margin-bottom: 1rem; }
 .category-row a { display: block; text-decoration: none; }
 .category-row .ph { aspect-ratio: 3 / 2; margin-bottom: 0.4rem; }
 
+/* Jobs page */
+.jobs { display: flow-root; }
+.jobs-aside { padding: 1.25rem; margin-bottom: 1.5rem; background: var(--accent-soft); border: 2px solid var(--accent); border-radius: var(--radius); }
+.jobs-aside > * + * { margin-top: 0.75rem; }
+.jobs-aside ul, .jobs-aside ol, .job ul { padding-left: 1.25rem; list-style: revert; }
+.jobs-aside a { overflow-wrap: anywhere; }
+.job { padding: 1.25rem; margin-bottom: 1.5rem; border: 1px solid var(--line); border-radius: var(--radius); }
+.job h4 { margin: 1rem 0 0; }
+.job-facts { display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 1rem; padding: 0.75rem; margin: 1rem 0; background: var(--accent-soft); border-radius: var(--radius); }
+.job-facts dt { font-weight: 600; }
+.job-facts dd { margin: 0; }
+.job .button { margin-top: 1rem; }
+
 /* Footer */
 .site-footer { margin-top: 3rem; padding-block: 2rem; color: #fff; background: var(--accent); }
 .footer-grid { display: grid; gap: 1.5rem; }
@@ -67,4 +81,10 @@ h2 { font-size: 1.25rem; margin-bottom: 1rem; }
   .product-row { grid-template-columns: repeat(4, 1fr); }
   .category-row { grid-template-columns: repeat(4, 1fr); }
   .footer-grid { grid-template-columns: 2fr 1fr; }
+}
+
+/* Desktop: the aside floats to the right of the jobs */
+@media (min-width: 64em) {
+  .jobs-aside { float: right; width: 25%; margin-left: 2%; }
+  .job { width: 73%; }
 }

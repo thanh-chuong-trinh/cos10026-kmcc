@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jobs at Second Volt, a used electronics store in Melbourne.">
+  <meta name="keywords" content="Second Volt, jobs, front-end developer, UX designer">
+  <meta name="author" content="Ngo Manh Cuong - 105710919">
+  <title>Jobs - Second Volt</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Embedded CSS (assignment requirement) -->
+  <style>
+    .job-ref { display: inline-block; padding: 0.1rem 0.6rem; color: #fff; background: var(--accent); border-radius: var(--radius); font-size: 0.8rem; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html">Second<span>Volt</span></a>
+      <form class="search" action="#" role="search">
+        <label class="visually-hidden" for="q">Search products</label>
+        <input id="q" name="q" type="search" placeholder="Search products">
+        <button type="submit">Search</button>
+      </form>
+      <nav aria-label="Account">
+        <ul class="inline-list">
+          <li><a href="#">Sign in</a></li>
+          <li><a href="#">Cart</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="container hero">
+      <h1>Work at Second Volt</h1>
+      <!-- Inline CSS (assignment requirement) -->
+      <p style="color: var(--muted);">Help us give used electronics a second life.</p>
+    </section>
+
+    <section class="container section jobs" aria-labelledby="jobs-title">
+      <h2 id="jobs-title">Open positions</h2>
+
+      <aside class="jobs-aside">
+        <h3>How to apply</h3>
+        <ol>
+          <li>Choose a position below.</li>
+          <li>Note its reference number.</li>
+          <li>Fill in the <a href="apply.html">application form</a>.</li>
+        </ol>
+        <h3>Benefits</h3>
+        <ul>
+          <li>Hybrid working</li>
+          <li>$2,500 yearly learning budget</li>
+          <li>Staff discounts on devices</li>
+        </ul>
+        <p>Questions? <a href="mailto:105710919@student.swin.edu.au">105710919@student.swin.edu.au</a></p>
+      </aside>
+
+      <section class="job" aria-labelledby="sv101">
+        <p class="job-ref">SV101</p>
+        <h3 id="sv101">Front-end Developer</h3>
+        <p>Build fast, accessible product pages for our online store.</p>
+        <dl class="job-facts">
+          <dt>Salary</dt><dd>$10,500 - $15,000</dd>
+          <dt>Reports to</dt><dd>Head of Digital Retail</dd>
+        </dl>
+        <h4>Responsibilities</h4>
+        <ul>
+          <li>Write semantic HTML and responsive CSS.</li>
+          <li>Keep pages accessible (WCAG 2.1 AA).</li>
+          <li>Review code with the team on GitHub.</li>
+        </ul>
+        <h4>Essential</h4>
+        <ul>
+          <li>3+ years of HTML and CSS experience.</li>
+          <li>Comfortable using Git.</li>
+        </ul>
+        <h4>Preferable</h4>
+        <ul>
+          <li>E-commerce experience.</li>
+        </ul>
+        <a class="button" href="apply.html">Apply for SV101</a>
+      </section>
+
+      <section class="job" aria-labelledby="sv205">
+        <p class="job-ref">SV205</p>
+        <h3 id="sv205">UX Designer</h3>
+        <p>Make shopping, checkout and trade-ins easy for every customer.</p>
+        <dl class="job-facts">
+          <dt>Salary</dt><dd>$9,500 - $11,200</dd>
+          <dt>Reports to</dt><dd>Director of Customer Experience</dd>
+        </dl>
+        <h4>Responsibilities</h4>
+        <ul>
+          <li>Run user tests and accessibility checks.</li>
+          <li>Design wireframes and prototypes.</li>
+          <li>Share findings with developers.</li>
+        </ul>
+        <h4>Essential</h4>
+        <ul>
+          <li>2+ years of UX design experience.</li>
+          <li>A portfolio of design work.</li>
+        </ul>
+        <h4>Preferable</h4>
+        <ul>
+          <li>Experience with screen readers.</li>
+        </ul>
+        <a class="button" href="apply.html">Apply for SV205</a>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="logo">SecondVolt</p>
+        <p>Tested used electronics.</p>
+      </div>
+      <nav aria-label="Help">
+        <h2>Help</h2>
+        <ul>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="container copyright">Demo page for COS10026. Not a real store.</p>
+  </footer>
+</body>
+</html>
