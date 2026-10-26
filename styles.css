@@ -79,5 +79,5 @@ h2 { font-size: 1.25rem; margin-bottom: 1rem; }
   .product-row { grid-template-columns: repeat(4, 1fr); }
   .category-row { grid-template-columns: repeat(4, 1fr); }
   .careers { grid-template-columns: 1fr auto; align-items: center; }
-  .footer-grid { grid-template-columns: 2fr 1fr; }
+  .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
 }
