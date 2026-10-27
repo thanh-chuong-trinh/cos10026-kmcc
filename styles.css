@@ -64,6 +64,7 @@ h2 { font-size: 1.25rem; margin-bottom: 1rem; }
 .category-row a { display: block; text-decoration: none; }
 .category-row .ph { aspect-ratio: 3 / 2; margin-bottom: 0.4rem; }
 
+<<<<<<< HEAD
 /* Jobs page */
 .jobs { display: flow-root; }
 .jobs-aside { padding: 1.25rem; margin-bottom: 1.5rem; background: var(--accent-soft); border: 2px solid var(--accent); border-radius: var(--radius); }
@@ -79,6 +80,19 @@ h2 { font-size: 1.25rem; margin-bottom: 1rem; }
 .commitment { clear: both; }
 .commitment p { max-width: 65ch; }
 .commitment p + p { margin-top: 0.75rem; }
+=======
+/* Main navigation and skip link (links to the other pages) */
+.main-nav ul { display: flex; gap: 0.5rem; padding-bottom: 1rem; overflow-x: auto; }
+.main-nav a { display: block; padding: 0.25rem 1rem; text-decoration: none; border: 1px solid var(--line); border-radius: 999px; white-space: nowrap; }
+.main-nav a:hover { background: #f5f5f4; }
+.main-nav a[aria-current="page"] { color: #fff; background: var(--accent); border-color: var(--accent); }
+.skip-link { position: absolute; left: 1rem; top: -4rem; padding: 0.5rem 1rem; color: #fff; background: var(--ink); border-radius: var(--radius); }
+.skip-link:focus { top: 1rem; }
+
+/* Careers call to action */
+.careers { display: grid; gap: 1rem; justify-items: start; padding: 1.5rem; background: #f5f5f4; border-radius: var(--radius); }
+.careers h2 { margin-bottom: 0.25rem; }
+>>>>>>> origin/main
 
 /* Footer */
 .site-footer { margin-top: 3rem; padding-block: 2rem; color: #fff; background: var(--accent); }
@@ -94,7 +108,8 @@ h2 { font-size: 1.25rem; margin-bottom: 1rem; }
   .header-row { grid-template-columns: auto 1fr auto; gap: 2rem; }
   .product-row { grid-template-columns: repeat(4, 1fr); }
   .category-row { grid-template-columns: repeat(4, 1fr); }
-  .footer-grid { grid-template-columns: 2fr 1fr; }
+  .careers { grid-template-columns: 1fr auto; align-items: center; }
+  .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
 }
 
 /* Desktop: the aside floats to the right of the jobs */

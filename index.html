@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
     <div class="container header-row">
       <a class="logo" href="index.html">Second<span>Volt</span></a>
@@ -23,6 +24,14 @@
         </ul>
       </nav>
     </div>
+    <nav class="container main-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="apply.html">Apply</a></li>
+        <li><a href="about/about.html">About</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main id="main">
@@ -67,6 +76,16 @@
         <li><a href="#"><div class="ph" aria-hidden="true"></div>Audio</a></li>
       </ul>
     </section>
+
+    <section class="container section" id="careers" aria-labelledby="careers-title">
+      <div class="careers">
+        <div>
+          <h2 id="careers-title">Work with us</h2>
+          <p>Second Volt is hiring testers, support staff and delivery drivers.</p>
+        </div>
+        <a class="button" href="apply.html">Apply now</a>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -75,6 +94,14 @@
         <p class="logo">SecondVolt</p>
         <p>Tested used electronics.</p>
       </div>
+      <nav aria-label="Site pages">
+        <h2>Site</h2>
+        <ul>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="apply.html">Apply</a></li>
+          <li><a href="about/about.html">About</a></li>
+        </ul>
+      </nav>
       <nav aria-label="Help">
         <h2>Help</h2>
         <ul>
