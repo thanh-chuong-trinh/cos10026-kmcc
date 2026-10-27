@@ -25,10 +25,6 @@ a { color: inherit; }
 .container { width: min(100% - 2rem, 64rem); margin-inline: auto; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-/* Skip link: hidden until it gets keyboard focus */
-.skip-link { position: absolute; left: 1rem; top: -3rem; padding: 0.5rem 1rem; color: #fff; background: var(--ink); border-radius: var(--radius); z-index: 10; }
-.skip-link:focus { top: 1rem; }
-
 /* Header */
 .header-row { display: grid; gap: 0.75rem; padding-block: 1rem; align-items: center; }
 .logo { font-size: 1.4rem; font-weight: 600; text-decoration: none; }
@@ -37,11 +33,6 @@ a { color: inherit; }
 .search input { flex: 1; min-width: 0; padding: 0.5rem 0.75rem; font: inherit; border: 1px solid var(--line); border-radius: var(--radius); }
 .search button { padding: 0.5rem 1rem; font: inherit; color: #fff; background: var(--accent); border: 0; border-radius: var(--radius); cursor: pointer; }
 .inline-list { display: flex; flex-wrap: wrap; gap: 1rem; }
-
-/* Main navigation: the current page is underlined and bold */
-.main-nav a { text-decoration: none; }
-.main-nav a:hover { text-decoration: underline; }
-.main-nav a[aria-current="page"] { font-weight: 600; color: var(--accent); text-decoration: underline; text-underline-offset: 0.3em; }
 
 /* Buttons and hero */
 .button { display: inline-block; padding: 0.6rem 1.2rem; color: #fff; background: var(--accent); border-radius: var(--radius); text-decoration: none; }
@@ -64,7 +55,18 @@ h2 { font-size: 1.25rem; margin-bottom: 1rem; }
 .category-row a { display: block; text-decoration: none; }
 .category-row .ph { aspect-ratio: 3 / 2; margin-bottom: 0.4rem; }
 
-<<<<<<< HEAD
+/* Main navigation and skip link (links to the other pages) */
+.main-nav ul { display: flex; gap: 0.5rem; padding-bottom: 1rem; overflow-x: auto; }
+.main-nav a { display: block; padding: 0.25rem 1rem; text-decoration: none; border: 1px solid var(--line); border-radius: 999px; white-space: nowrap; }
+.main-nav a:hover { background: #f5f5f4; }
+.main-nav a[aria-current="page"] { color: #fff; background: var(--accent); border-color: var(--accent); }
+.skip-link { position: absolute; left: 1rem; top: -4rem; padding: 0.5rem 1rem; color: #fff; background: var(--ink); border-radius: var(--radius); }
+.skip-link:focus { top: 1rem; }
+
+/* Careers call to action */
+.careers { display: grid; gap: 1rem; justify-items: start; padding: 1.5rem; background: #f5f5f4; border-radius: var(--radius); }
+.careers h2 { margin-bottom: 0.25rem; }
+
 /* Jobs page */
 .jobs { display: flow-root; }
 .jobs-aside { padding: 1.25rem; margin-bottom: 1.5rem; background: var(--accent-soft); border: 2px solid var(--accent); border-radius: var(--radius); }
@@ -80,19 +82,6 @@ h2 { font-size: 1.25rem; margin-bottom: 1rem; }
 .commitment { clear: both; }
 .commitment p { max-width: 65ch; }
 .commitment p + p { margin-top: 0.75rem; }
-=======
-/* Main navigation and skip link (links to the other pages) */
-.main-nav ul { display: flex; gap: 0.5rem; padding-bottom: 1rem; overflow-x: auto; }
-.main-nav a { display: block; padding: 0.25rem 1rem; text-decoration: none; border: 1px solid var(--line); border-radius: 999px; white-space: nowrap; }
-.main-nav a:hover { background: #f5f5f4; }
-.main-nav a[aria-current="page"] { color: #fff; background: var(--accent); border-color: var(--accent); }
-.skip-link { position: absolute; left: 1rem; top: -4rem; padding: 0.5rem 1rem; color: #fff; background: var(--ink); border-radius: var(--radius); }
-.skip-link:focus { top: 1rem; }
-
-/* Careers call to action */
-.careers { display: grid; gap: 1rem; justify-items: start; padding: 1.5rem; background: #f5f5f4; border-radius: var(--radius); }
-.careers h2 { margin-bottom: 0.25rem; }
->>>>>>> origin/main
 
 /* Footer */
 .site-footer { margin-top: 3rem; padding-block: 2rem; color: #fff; background: var(--accent); }
