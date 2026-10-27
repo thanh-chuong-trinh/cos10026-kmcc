@@ -4,6 +4,7 @@
   --muted: #57534e;
   --line: #e7e5e4;
   --accent: #0a6fa8;
+  --accent-soft: #e6f3fa;
   --radius: 8px;
 }
 
@@ -31,7 +32,7 @@ a { color: inherit; }
 .search { display: flex; gap: 0.5rem; }
 .search input { flex: 1; min-width: 0; padding: 0.5rem 0.75rem; font: inherit; border: 1px solid var(--line); border-radius: var(--radius); }
 .search button { padding: 0.5rem 1rem; font: inherit; color: #fff; background: var(--accent); border: 0; border-radius: var(--radius); cursor: pointer; }
-.inline-list { display: flex; gap: 1rem; }
+.inline-list { display: flex; flex-wrap: wrap; gap: 1rem; }
 
 /* Buttons and hero */
 .button { display: inline-block; padding: 0.6rem 1.2rem; color: #fff; background: var(--accent); border-radius: var(--radius); text-decoration: none; }
@@ -66,11 +67,29 @@ h2 { font-size: 1.25rem; margin-bottom: 1rem; }
 .careers { display: grid; gap: 1rem; justify-items: start; padding: 1.5rem; background: #f5f5f4; border-radius: var(--radius); }
 .careers h2 { margin-bottom: 0.25rem; }
 
+/* Jobs page */
+.jobs { display: flow-root; }
+.jobs-aside { padding: 1.25rem; margin-bottom: 1.5rem; background: var(--accent-soft); border: 2px solid var(--accent); border-radius: var(--radius); }
+.jobs-aside > * + * { margin-top: 0.75rem; }
+.jobs-aside ul, .jobs-aside ol, .job ul { padding-left: 1.25rem; list-style: revert; }
+.jobs-aside a { overflow-wrap: anywhere; }
+.job { padding: 1.25rem; margin-bottom: 1.5rem; border: 1px solid var(--line); border-radius: var(--radius); }
+.job h4 { margin: 1rem 0 0; }
+.job-facts { display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 1rem; padding: 0.75rem; margin: 1rem 0; background: var(--accent-soft); border-radius: var(--radius); }
+.job-facts dt { font-weight: 600; }
+.job-facts dd { margin: 0; }
+.job .button { margin-top: 1rem; }
+.commitment { clear: both; }
+.commitment p { max-width: 65ch; }
+.commitment p + p { margin-top: 0.75rem; }
+
 /* Footer */
 .site-footer { margin-top: 3rem; padding-block: 2rem; color: #fff; background: var(--accent); }
 .footer-grid { display: grid; gap: 1.5rem; }
 .site-footer h2 { font-size: 1rem; }
 .site-footer li { font-size: 0.9rem; }
+.site-footer li + li { margin-top: 0.25rem; }
+.site-footer :focus-visible { outline-color: #fff; }
 .copyright { margin-top: 1.5rem; font-size: 0.85rem; }
 
 /* Wider screens */
@@ -80,4 +99,10 @@ h2 { font-size: 1.25rem; margin-bottom: 1rem; }
   .category-row { grid-template-columns: repeat(4, 1fr); }
   .careers { grid-template-columns: 1fr auto; align-items: center; }
   .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+}
+
+/* Desktop: the aside floats to the right of the jobs */
+@media (min-width: 64em) {
+  .jobs-aside { float: right; width: 25%; margin-left: 2%; }
+  .job { width: 73%; }
 }
