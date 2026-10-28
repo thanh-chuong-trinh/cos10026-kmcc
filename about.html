@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Meet Group 6, the team behind the Second Volt website.">
+  <title>About Us - Second Volt</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Embedded CSS (assignment requirement) -->
+  <style>
+    .student-id { letter-spacing: 0.06em; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="index.html">Second<span>Volt</span></a>
+      <form class="search" action="#" role="search">
+        <label class="visually-hidden" for="q">Search products</label>
+        <input id="q" name="q" type="search" placeholder="Search products">
+        <button type="submit">Search</button>
+      </form>
+      <nav aria-label="Account">
+        <ul class="inline-list">
+          <li><a href="#">Sign in</a></li>
+          <li><a href="#">Cart</a></li>
+        </ul>
+      </nav>
+    </div>
+    <nav class="container main-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="apply.html">Apply</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="container hero" aria-labelledby="page-title">
+      <h1 id="page-title">About us</h1>
+      <!-- Inline CSS (assignment requirement) -->
+      <p style="color: var(--muted);">Short intro to Group 6: who we are and what we built.</p>
+    </section>
+
+    <!-- Jump links to the sections below -->
+    <nav class="container page-jump" aria-label="On this page">
+      <ul>
+        <li><a href="#group">Our group</a></li>
+        <li><a href="#members">Team members</a></li>
+        <li><a href="#photo">Group photo</a></li>
+        <li><a href="#facts">Fun facts</a></li>
+      </ul>
+    </nav>
+
+    <section class="container about-section" id="group" aria-labelledby="group-title">
+      <h2 id="group-title">Our group</h2>
+      <ul class="group-list">
+        <li>Group name: Group 6
+          <ul>
+            <li>Class day: Wednesday</li>
+            <li>Class time: 9:00 - 12:00</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="container about-section" id="members" aria-labelledby="members-title">
+      <h2 id="members-title">Team members</h2>
+      <dl class="member-list">
+        <div class="member">
+          <dt>Trinh Thanh Chuong (<span class="student-id">106392431</span>)</dt>
+          <dd>Contribution: index.html, styles.css</dd>
+          <dd class="quote"><q lang="vi">Có công mài sắt, có ngày nên kim.</q> (English: <q>With enough perseverance, an iron bar can be ground into a needle.</q>)</dd>
+        </div>
+        <div class="member">
+          <dt>Nguyen Tuan Minh (<span class="student-id">1106393324</span>)</dt>
+          <dd>Contribution: about.html, about section of styles.css</dd>
+          <dd class="quote"><q lang="vi">Không có gì quý hơn độc lập, tự do.</q> (English: <q>Nothing is more precious than independence and freedom.</q>)</dd>
+        </div>
+        <div class="member">
+          <dt>Ngô Mạnh Cường (<span class="student-id">105710919</span>)</dt>
+          <dd>Contribution: jobs.html, jobs section of styles.css</dd>
+          <dd class="quote"><q lang="vi">Thất bại là mẹ thành công.</q> (English: <q>Failure is the mother of success.</q>)</dd>
+        </div>
+        <div class="member">
+          <dt>Chu Lê Gia Khánh (<span class="student-id">106394068</span>)</dt>
+          <dd>Contribution: apply.html, apply section of styles.css</dd>
+          <dd class="quote"><q lang="vi">Đi một ngày đàng, học một sàng khôn.</q> (English: <q>Travel a day’s journey, and gain a basketful of wisdom.</q>)</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="container about-section" id="photo" aria-labelledby="photo-title">
+      <h2 id="photo-title">Group photo</h2>
+      <figure class="about-figure">
+        <img src="images/group.jpg" alt="Team photo" wid]th="600" height="400">
+        <figcaption>Team Photo</figcaption>
+      </figure>
+    </section>
+
+    <section class="container about-section" id="facts" aria-labelledby="facts-title">
+      <h2 id="facts-title">Fun facts</h2>
+      <div class="table-wrap">
+        <table class="facts-table">
+          <caption>Fun facts about our team</caption>
+          <thead>
+            <tr>
+              <th scope="col">Member</th>
+              <th scope="col">Dream job</th>
+              <th scope="col">Coding snack</th>
+              <th scope="col">Hometown</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Trinh Thanh Chuong</th><td>Sports Analyst</td><td>Soft Drinks</td><td>Hanoi</td></tr>
+            <tr><th scope="row">Nguyen Tuan Minh</th><td>Game Developer</td><td>Chips</td><td>Bac Ninh</td></tr>
+            <tr><th scope="row">Ngô Mạnh Cường</th><td>Web Developer</td><td>Pizza</td><td>HCMC</td></tr>
+            <tr><th scope="row">Chu Lê Gia Khánh</th><td>Data Scientist</td><td>Coffee</td><td>Da Lat</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="logo">SecondVolt</p>
+        <p>Tested used electronics.</p>
+      </div>
+      <nav aria-label="Project">
+        <h2>Project</h2>
+        <ul>
+          <li><a href="https://zinbattle3.atlassian.net/jira/software/projects/GROUP6/summary">Jira project</a></li>
+          <li><a href="https://github.com/thanh-chuong-trinh/cos10026-kmcc">GitHub repository</a></li>
+          <li><a href="https://thanh-chuong-trinh.github.io/cos10026-kmcc/">Live website</a></li>
+          <li><a href="mailto:info@secondvolt.com.au">info@secondvolt.com.au</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="container copyright">Demo website for COS10026 by Group 6. Second Volt is not a real store.</p>
+  </footer>
+</body>
+</html>
