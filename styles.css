@@ -45,7 +45,11 @@ h1 { font-size: clamp(1.75rem, 5vw, 2.5rem); line-height: 1.15; }
 h2 { font-size: 1.25rem; margin-bottom: 1rem; }
 .ph { display: block; background: #f0efed; border: 1px dashed #d6d3d1; border-radius: var(--radius); }
 .product-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-.product .ph { aspect-ratio: 1; margin-bottom: 0.5rem; }
+.product img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; margin-bottom: 0.5rem; border-radius: var(--radius); }
+.grade-key { max-width: 65ch; margin-bottom: 1rem; color: var(--muted); }
+.grade { margin-top: 0.25rem; font-size: 0.9rem; }
+.grade span { padding: 0.1rem 0.5rem; margin-right: 0.25rem; font-weight: 600; color: var(--ink); background: var(--accent-soft); border-radius: 999px; }
+.condition { margin-top: 0.25rem; font-size: 0.9rem; color: var(--muted); }
 .product h3 { font-size: 1rem; font-weight: 500; }
 .price { font-weight: 600; }
 .price s { margin-left: 0.3rem; font-weight: 400; color: var(--muted); }
