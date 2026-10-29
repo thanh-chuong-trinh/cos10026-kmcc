@@ -3,26 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Second Volt sells tested, used electronics.">
+  <meta name="description" content="Second Volt sells tested, used phones and laptops with honest condition grades and a 12 month warranty.">
+  <meta name="keywords" content="second hand electronics, used phones, used laptops, refurbished, Second Volt">
+  <meta name="author" content="Group 6, COS10026">
   <title>Second Volt - Used Electronics</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Embedded CSS: styles for the grade table on this page only */
+    .grade-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    .grade-table caption { padding-bottom: 0.5rem; font-weight: 600; text-align: left; }
+    .grade-table th, .grade-table td { padding: 0.6rem 0.75rem; text-align: left; border: 1px solid var(--line); vertical-align: top; }
+    .grade-table thead th { background: var(--accent-soft); }
+    .table-scroll { overflow-x: auto; }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
     <div class="container header-row">
-      <a class="logo" href="index.html">Second<span>Volt</span></a>
+      <a class="logo" href="index.html"><img src="images/logo.svg" width="36" height="36" alt=""><span class="logo-text">Second<span>Volt</span></span></a>
       <form class="search" action="#" role="search">
         <label class="visually-hidden" for="q">Search products</label>
         <input id="q" name="q" type="search" placeholder="Search products">
         <button type="submit">Search</button>
       </form>
-      <nav aria-label="Account">
-        <ul class="inline-list">
-          <li><a href="#">Sign in</a></li>
-          <li><a href="#">Cart</a></li>
-        </ul>
-      </nav>
     </div>
     <nav class="container main-nav" aria-label="Main">
       <ul>
@@ -36,6 +40,7 @@
 
   <main id="main">
     <section class="container hero" aria-labelledby="hero-title">
+      <p class="slogan">Good electronics deserve a second owner.</p>
       <h1 id="hero-title">Used electronics, tested.</h1>
       <p>Phones, laptops and more at fair prices.</p>
       <a class="button" href="#phones">Shop phones</a>
@@ -113,11 +118,65 @@
     <section class="container section" id="categories" aria-labelledby="cat-title">
       <h2 id="cat-title">Categories</h2>
       <ul class="category-row">
-        <li><a href="#phones"><div class="ph" aria-hidden="true"></div>Mobile</a></li>
-        <li><a href="#laptops"><div class="ph" aria-hidden="true"></div>Laptops</a></li>
-        <li><a href="#"><div class="ph" aria-hidden="true"></div>Cameras</a></li>
-        <li><a href="#"><div class="ph" aria-hidden="true"></div>Audio</a></li>
+        <li><a href="#phones"><img src="images/phone-s20.svg" width="300" height="200" alt="">Mobile</a></li>
+        <li><a href="#laptops"><img src="images/laptop-halden.svg" width="300" height="200" alt="">Laptops</a></li>
+        <li><span><img src="images/cat-camera.svg" width="300" height="200" alt="">Cameras</span></li>
+        <li><span><img src="images/cat-audio.svg" width="300" height="200" alt="">Audio</span></li>
       </ul>
+    </section>
+
+    <section class="container section about" id="about-us" aria-labelledby="about-title">
+      <div>
+        <h2 id="about-title">About Second Volt</h2>
+        <p>Second Volt is a student-run store that tests, grades and resells used phones and laptops. Every device is checked by hand, wiped, and described honestly, so you know the condition before you buy.</p>
+        <p>We keep good electronics out of landfill and offer them at fair prices, with a 12 month warranty on every order.</p>
+      </div>
+      <img src="images/hero-devices.svg" width="400" height="280" alt="Illustration of a laptop, a phone and headphones on a desk">
+    </section>
+
+    <section class="container section" id="grades" aria-labelledby="grades-title">
+      <h2 id="grades-title">Condition grades and warranty</h2>
+      <div class="table-scroll">
+        <table class="grade-table">
+          <caption>How each grade is priced and covered</caption>
+          <thead>
+            <tr>
+              <th rowspan="2" scope="col">Grade</th>
+              <th rowspan="2" scope="col">What it means</th>
+              <th colspan="2" scope="colgroup">Typical saving against new</th>
+              <th rowspan="2" scope="col">Warranty</th>
+            </tr>
+            <tr>
+              <th scope="col">Phones</th>
+              <th scope="col">Laptops</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">A</th>
+              <td>Like new, no marks you can see</td>
+              <td>36% to 56%</td>
+              <td>34% to 40%</td>
+              <td rowspan="3">12 months. Covers faults and battery failure, not accidental damage.</td>
+            </tr>
+            <tr>
+              <th scope="row">B</th>
+              <td>Light scratches or scuffs, fully working</td>
+              <td>22% to 27%</td>
+              <td>43%</td>
+            </tr>
+            <tr>
+              <th scope="row">C</th>
+              <td>Clear wear, fully working</td>
+              <td>Not stocked</td>
+              <td>42%</td>
+            </tr>
+            <tr>
+              <td colspan="5" style="font-size: 0.85rem; color: #57534e;">Savings are based on the current listings above and change as stock changes.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section class="container section" id="careers" aria-labelledby="careers-title">
@@ -135,26 +194,27 @@
     <div class="container footer-grid">
       <div>
         <p class="logo">SecondVolt</p>
-        <p>Tested used electronics.</p>
+        <p>Tested used electronics. Good gear, honest grades.</p>
       </div>
       <nav aria-label="Site pages">
         <h2>Site</h2>
         <ul>
           <li><a href="jobs.html">Jobs</a></li>
           <li><a href="apply.html">Apply</a></li>
-          <li><a href="about/about.html">About</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
       </nav>
-      <nav aria-label="Help">
-        <h2>Help</h2>
+      <nav aria-label="Project">
+        <h2>Project</h2>
         <ul>
-          <li><a href="#">Shipping</a></li>
-          <li><a href="#">Returns</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="https://zinbattle3.atlassian.net/jira/software/projects/GROUP6/summary">Jira project</a></li>
+          <li><a href="https://github.com/thanh-chuong-trinh/cos10026-kmcc">GitHub repository</a></li>
+          <li><a href="https://thanh-chuong-trinh.github.io/cos10026-kmcc/">Live website</a></li>
+          <li><a href="mailto:info@secondvolt.com.au">info@secondvolt.com.au</a></li>
         </ul>
       </nav>
     </div>
-    <p class="container copyright">Demo page for COS10026. Not a real store.</p>
+    <p class="container copyright">Demo website for COS10026 by Group 6. Second Volt is not a real store.</p>
   </footer>
 </body>
 </html>
