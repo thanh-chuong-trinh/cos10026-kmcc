@@ -139,6 +139,7 @@ h2 { font-size: 1.25rem; margin-bottom: 1rem; }
 .site-footer li { font-size: 0.9rem; }
 .site-footer li + li { margin-top: 0.25rem; }
 .site-footer :focus-visible { outline-color: #fff; }
+.acknowledgement { margin-top: 1.5rem; font-size: 0.9rem; }
 .copyright { margin-top: 1.5rem; font-size: 0.85rem; }
 
 /* Wider screens */

@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<!--
+  index.html - Home page for Second Volt
+  Author: thanh-chuong-trinh (106392431), Group 6 (KMCC), COS10026
+  Acknowledgements:
+  - Shared header, footer and styles.css conventions by the team (see README.md).
+  - Product and category photos are from Wikimedia Commons under Creative Commons licences. Photographers and licences are listed in the Photo credits section of this page.
+  - Acknowledgement of Country wording follows the guidance linked in the assignment brief.
+-->
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -6,10 +14,12 @@
   <meta name="description" content="Second Volt sells tested, used phones and laptops with honest condition grades and a 12 month warranty.">
   <meta name="keywords" content="second hand electronics, used phones, used laptops, refurbished, Second Volt">
   <meta name="author" content="Group 6, COS10026">
+  <meta name="theme-color" content="#0a6fa8">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
   <title>Second Volt - Used Electronics</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Embedded CSS (assignment requirement): styles for the grade table on this page only -->
   <style>
-    /* Embedded CSS: styles for the grade table on this page only */
     .grade-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
     .grade-table caption { padding-bottom: 0.5rem; font-weight: 600; text-align: left; }
     .grade-table th, .grade-table td { padding: 0.6rem 0.75rem; text-align: left; border: 1px solid var(--line); vertical-align: top; }
@@ -18,7 +28,9 @@
   </style>
 </head>
 <body>
+  <!-- Skip link: lets keyboard and screen reader users jump past the header -->
   <a class="skip-link" href="#main">Skip to main content</a>
+  <!-- Header: logo, search form and main menu shared by every page -->
   <header class="site-header">
     <div class="container header-row">
       <a class="logo" href="index.html"><img src="images/logo.svg" width="36" height="36" alt=""><span class="logo-text">Second<span>Volt</span></span></a>
@@ -39,6 +51,7 @@
   </header>
 
   <main id="main">
+    <!-- Hero: slogan, main heading and call to action. The background image is set in styles.css -->
     <section class="container hero" aria-labelledby="hero-title">
       <p class="slogan">Good electronics deserve a second owner.</p>
       <h1 id="hero-title">Used electronics, tested.</h1>
@@ -46,6 +59,7 @@
       <a class="button" href="#phones">Shop phones</a>
     </section>
 
+    <!-- Smartphone listings with grade and written condition notes -->
     <section class="container section" id="phones" aria-labelledby="phones-title">
       <h2 id="phones-title">Smartphones</h2>
       <p class="grade-key">Condition grades: A is like new, B shows light wear, C shows clear wear but works fully. Every phone is tested. Photos are from Wikimedia Commons (credits at the bottom of the page) and show the same model, not the exact unit.</p>
@@ -81,6 +95,7 @@
       </ul>
     </section>
 
+    <!-- Laptop listings with grade and written condition notes -->
     <section class="container section" id="laptops" aria-labelledby="laptops-title">
       <h2 id="laptops-title">Laptops</h2>
       <ul class="product-row">
@@ -115,6 +130,7 @@
       </ul>
     </section>
 
+    <!-- Category tiles that link to the product sections -->
     <section class="container section" id="categories" aria-labelledby="cat-title">
       <h2 id="cat-title">Categories</h2>
       <ul class="category-row">
@@ -125,6 +141,7 @@
       </ul>
     </section>
 
+    <!-- About the company: purpose and identity -->
     <section class="container section about" id="about-us" aria-labelledby="about-title">
       <div>
         <h2 id="about-title">About Second Volt</h2>
@@ -134,6 +151,7 @@
       <img src="images/photos/about-xps.jpg" width="900" height="600" alt="Two Dell XPS laptops open side by side on a white shelf">
     </section>
 
+    <!-- Merged-cell table (rowspan and colspan) explaining condition grades and warranty -->
     <section class="container section" id="grades" aria-labelledby="grades-title">
       <h2 id="grades-title">Condition grades and warranty</h2>
       <div class="table-scroll">
@@ -172,6 +190,7 @@
               <td>42%</td>
             </tr>
             <tr>
+              <!-- Inline CSS (assignment requirement): small note text -->
               <td colspan="5" style="font-size: 0.85rem; color: #57534e;">Savings are based on the current listings above and change as stock changes.</td>
             </tr>
           </tbody>
@@ -179,6 +198,7 @@
       </div>
     </section>
 
+    <!-- Careers call to action that links to the Apply page -->
     <section class="container section" id="careers" aria-labelledby="careers-title">
       <div class="careers">
         <div>
@@ -188,6 +208,7 @@
         <a class="button" href="apply.html">Apply now</a>
       </div>
     </section>
+    <!-- Photo credits required by the Creative Commons licences -->
     <section class="container section credits" id="credits" aria-labelledby="credits-title">
       <h2 id="credits-title">Photo credits</h2>
       <ul>
@@ -206,6 +227,7 @@
     </section>
   </main>
 
+  <!-- Footer: page links, project links (Jira, GitHub, live site), email and Acknowledgement of Country -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
@@ -230,6 +252,7 @@
         </ul>
       </nav>
     </div>
+    <p class="container acknowledgement">Second Volt acknowledges the Wurundjeri Woi-wurrung people of the Kulin Nation, the Traditional Owners of the land in Naarm (Melbourne) where our team works. We pay our respects to their Elders past and present.</p>
     <p class="container copyright">Demo website for COS10026 by Group 6. Second Volt is not a real store.</p>
   </footer>
 </body>
