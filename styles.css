@@ -417,6 +417,40 @@ h2 { font-size: 1.25rem; margin-bottom: 1rem; }
   font-size: 0.85rem;
 }
 
+/* Apply: separate job requirements above the shared confirmations. */
+.apply-page .role-requirements-intro {
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+.apply-page .role-requirements {
+  display: grid;
+  gap: 1rem;
+}
+
+.apply-page .role-requirements-card {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+}
+
+.apply-page .role-requirements-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+}
+
+.apply-page .role-requirements-card ul {
+  padding-left: 1.15rem;
+  list-style: disc;
+}
+
+.apply-page .role-requirements-card li + li {
+  margin-top: 0.65rem;
+}
+
 .choice-group {
   min-width: 0;
   padding: 1rem;
@@ -513,7 +547,7 @@ h2 { font-size: 1.25rem; margin-bottom: 1rem; }
 @media (min-width: 40em) {
   .form-grid,
   .gender-options,
-  .skill-options {
+  .apply-page .role-requirements {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 

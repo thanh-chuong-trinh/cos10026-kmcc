@@ -233,24 +233,33 @@
                   <label for="date-of-birth"
                     >Date of birth <span>(required)</span></label
                   >
-                  <!-- dd/mm/yyyy as required by the assignment brief. -->
+                  <!-- HTML-only validation: valid calendar dates from 1900 to
+                       the fixed cutoff 01/11/2026, including leap years.
+                       The lookahead limits the year and cutoff; the remaining
+                       alternatives check month lengths and 29 February.
+                       HTML cannot update today's date automatically. Update
+                       pattern, title, help and error together if the cutoff changes. -->
                   <input
                     type="text"
                     id="date-of-birth"
                     name="date_of_birth"
+                    autocomplete="bday"
                     placeholder="dd/mm/yyyy"
+                    minlength="10"
                     maxlength="10"
-                    pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(19|20)[0-9]{2}"
+                    pattern="(?=(?:[0-9]{2}/[0-9]{2}/(?:19[0-9]{2}|20[01][0-9]|202[0-5])|[0-9]{2}/(?:0[1-9]|10)/2026|01/11/2026)$)(?:(?:0[1-9]|1[0-9]|2[0-8])/(?:0[1-9]|1[0-2])/[0-9]{4}|(?:29|30)/(?:0[13-9]|1[0-2])/[0-9]{4}|31/(?:0[13578]|1[02])/[0-9]{4}|29/02/(?:(?:19|20)(?:0[48]|[2468][048]|[13579][26])|2000))"
                     aria-describedby="date-of-birth-help date-of-birth-error"
-                    title="Enter your date of birth as dd/mm/yyyy, for example 25/03/2004."
+                    title="Enter a real date as dd/mm/yyyy, between 01/01/1900 and 01/11/2026."
                     required
                   />
                   <small id="date-of-birth-help"
-                    >Use the format dd/mm/yyyy, for example 25/03/2004.</small
+                    >Use dd/mm/yyyy, for example 25/03/2004. Accepted range:
+                    01/01/1900 to 01/11/2026.</small
                   >
                   <span class="field-error" id="date-of-birth-error"
-                    >Error: Enter your date of birth in the format
-                    dd/mm/yyyy.</span
+                    >Error: Enter a real calendar date in dd/mm/yyyy format,
+                    between 01/01/1900 and 01/11/2026. Check the day, month and
+                    leap year.</span
                   >
                 </p>
               </div>
@@ -464,55 +473,83 @@
               <legend>
                 <span class="section-number" aria-hidden="true">05</span>Skills
               </legend>
+              <p class="role-requirements-intro">
+                Read the requirements for the job reference you entered above,
+                then complete the three confirmations below.
+              </p>
+              <div class="role-requirements">
+                <section class="role-requirements-card" aria-labelledby="sv101-skills-title">
+                  <h3 id="sv101-skills-title">SV101 — Front-end Developer</h3>
+                  <ul>
+                    <li><strong>Experience:</strong> 3+ years building websites with HTML and CSS.</li>
+                    <li><strong>Tools:</strong> Comfortable using Git in a team.</li>
+                    <li><strong>Accessibility:</strong> Experience testing pages with a keyboard and a screen reader.</li>
+                  </ul>
+                </section>
+                <section class="role-requirements-card" aria-labelledby="sv205-skills-title">
+                  <h3 id="sv205-skills-title">SV205 — UX Designer</h3>
+                  <ul>
+                    <li><strong>Experience:</strong> 2+ years of UX design experience.</li>
+                    <li><strong>Portfolio:</strong> A portfolio that shows your design process.</li>
+                    <li><strong>Accessibility:</strong> Working knowledge of WCAG 2.1.</li>
+                  </ul>
+                </section>
+              </div>
               <fieldset
                 class="choice-group"
                 aria-describedby="skills-help skills-error"
               >
-                <legend>Core skills <span>(required)</span></legend>
+                <legend>Confirm your skills <span>(required)</span></legend>
                 <p id="skills-help">
-                  Confirm that you meet all three core skill requirements.
+                  Confirm all three requirements for your chosen job reference.
+                  You do not need to meet the requirements for the other role.
                 </p>
+                <!-- Applicants declare the requirements for their selected role.
+                     HTML validation checks confirmation, not actual experience. -->
                 <div class="choice-options skill-options">
                   <p>
                     <input
                       type="checkbox"
-                      id="skill-teamwork"
+                      id="skill-experience"
                       name="skills[]"
-                      value="Communication and teamwork"
+                      value="Required experience for the selected role"
                       required
                       aria-describedby="skills-help skills-error"
                     />
-                    <label for="skill-teamwork"
-                      >Communication and teamwork</label
-                    >
+                    <label for="skill-experience">
+                      I meet the experience requirement for my chosen role.
+                    </label>
                   </p>
                   <p>
                     <input
                       type="checkbox"
-                      id="skill-problem-solving"
+                      id="skill-tools-portfolio"
                       name="skills[]"
-                      value="Problem solving"
+                      value="Git teamwork or UX portfolio for the selected role"
                       required
                       aria-describedby="skills-help skills-error"
                     />
-                    <label for="skill-problem-solving">Problem solving</label>
+                    <label for="skill-tools-portfolio">
+                      I meet the Git teamwork requirement (SV101) or the
+                      portfolio requirement (SV205) for my chosen role.
+                    </label>
                   </p>
                   <p>
                     <input
                       type="checkbox"
                       id="skill-accessible-design"
                       name="skills[]"
-                      value="Accessible and user-centred design"
+                      value="Accessibility requirements for the selected role"
                       required
                       aria-describedby="skills-help skills-error"
                     />
-                    <label for="skill-accessible-design"
-                      >Accessible and user-centred design</label
-                    >
+                    <label for="skill-accessible-design">
+                      I meet the accessibility requirement for my chosen role.
+                    </label>
                   </p>
                 </div>
                 <p class="field-error" id="skills-error">
-                  Error: Confirm all three required core skills.
+                  Error: Confirm all three requirements for your chosen role.
                 </p>
               </fieldset>
 
@@ -528,7 +565,11 @@
                   aria-describedby="other-skills-help"
                 ></textarea>
                 <small id="other-skills-help"
-                  >Describe any additional skills relevant to the role.</small
+                  >Describe any additional skills relevant to your chosen role.
+                  For SV101, you could mention e-commerce experience or an
+                  interest in reuse and reducing e-waste. For SV205, you could
+                  mention designing for screen reader users or experience with
+                  an online store or marketplace.</small
                 >
               </p>
             </fieldset>
