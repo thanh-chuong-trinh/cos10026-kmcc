@@ -132,6 +132,14 @@ h2 { font-size: 1.25rem; margin-bottom: 1rem; }
   .member-list { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* Header tagline (jobs and about pages): short slogan beside the logo */
+.header-tagline { display: inline-flex; gap: 0.5rem; align-items: center; justify-self: start; padding: 0.45rem 1.1rem 0.45rem 0.9rem; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.04em; color: #ffffff; background: linear-gradient(135deg, #062f48, #084c73); border-radius: 999px; box-shadow: 0 2px 0 #fbbf24, 0 4px 10px rgba(8, 76, 115, 0.3); }
+.header-tagline::before { content: ""; flex: 0 0 auto; width: 0.75rem; height: 1.1rem; background: #fbbf24; clip-path: polygon(60% 0, 0 58%, 42% 58%, 30% 100%, 100% 38%, 56% 38%); }
+.header-tagline span { color: #fbbf24; }
+@media (min-width: 48em) {
+  .header-tagline { justify-self: end; }
+}
+
 /* Footer */
 .site-footer { margin-top: 3rem; padding-block: 2rem; color: #fff; background: var(--accent); }
 .footer-grid { display: grid; gap: 1.5rem; }
